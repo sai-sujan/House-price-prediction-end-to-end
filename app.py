@@ -2,6 +2,7 @@ import time
 #from predict import Predict
 from flask import Flask, render_template, request, flash
 from flask_cors import CORS, cross_origin
+import os
 app = Flask(__name__)  # object
 
 app.secret_key = "super secret key"
@@ -46,4 +47,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
