@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% if price %}
+        <h1>Predicted Price is(in $): {{ price[0] }}</h1>
+    {% else %}
+        <h1>No results found</h1>
+    {% endif %}
+{% endblock content %}

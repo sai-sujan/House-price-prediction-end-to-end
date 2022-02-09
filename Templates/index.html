@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<section class="form4 cid-sP5US3wDnp mbr-fullscreen" id="form4-2">
+
+    <div class="container-fluid">
+        <div class="row content-wrapper justify-content-center">
+            <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
+                <form action="/predict" method="POST" class="mbr-form form-with-styler" >
+                    <div class="">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Successfully entered the values.</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                    </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12" id="pred">
+                            <h1 class="display-4"><strong>Start Prediction</strong></h1>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <p class="mbr-text mbr-fonts-style mb-4 display-7"></p>
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="area_income">
+                            <input type="number" step="any" name="area_income" placeholder="Avg Area Income" data-form-field="area_income" class="form-control" value="" id="area_income">
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="area_house_age">
+                            <input type="number" step="any" name="area_house_age" placeholder="Avg Area House Age	" class="form-control" value="" id="area_house_age">
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="email">
+                            <input type="number" step="any" name="area_number_of_rooms" placeholder="Avg Area Number of Rooms" class="form-control" value="" id="area_number_of_rooms">
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="area_number_of_bedrooms">
+                            <input type="number" step="any" name="area_number_of_bedrooms" placeholder="Avg Area Number of Bedrooms" class="form-control" value="" id="area_number_of_bedrooms">
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="area_population">
+                            <input type="number" step="any" name="area_population" placeholder="Avg Area Population"  class="form-control" value="" id="area_population">
+                        </div>
+                        <div class="col-12 col-md-auto mbr-section-btn">
+                            <button type="submit" class="btn btn-secondary display-4">Submit</button>
+                        </div>
+
+                </form>
+            </div>
+            <div class="col-lg-7 offset-lg-1 col-12">
+                <div class="image-wrapper">
+                    <img class="w-100" src="{{url_for('static',filename='mbr-1293x862.jpg')}}" alt="Mobirise">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
